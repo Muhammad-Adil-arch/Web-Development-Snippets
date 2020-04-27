@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protfolio</title>
+    <link rel="stylesheet" href="./public/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script id="templateContent" type="text/x-handlebars-template">
+        <div class="content">
+            <h1>Hello Stranger</h1>
+            <h1>I'm <span>{{name}}</span></h1>
+            <p>{{intro}}</p>
+            <a href="#" class="btn">Know More</a>
+        </div>
+    </script>
+    <script id="templateMenu" type="text/x-handlebars-template">    
+    {{#each menus}}
+    <div id="navigation">
+        <ul>
+            <li><a href="#">{{this}}</a></li>
+        </ul>
+    </div>   
+    {{/each}}
+    </script>
+</head>
+<body>
+  
+<div class="banner" id="sec">
+    <div class="header">
+        <div class="toggle" onclick="toggle()">
+        </div>
+    </div>
+    <div class="content">
+        <h1>Hello Stranger</h1>
+        <h1>I'm <span>Muhammad Adil</span></h1>
+        <p>
+            I'm a Front End Developer and a Computer Science Student.
+            I'm also a Programmer and a member of Google Community.You can know 
+            more about me.
+        </p>
+        <a href="#" class="btn">Know More</a>
+    </div>
+    <ul class="links">
+        <li><a href="#"><img src="./public/facebook.png" alt=""></a></li>
+        <li><a href="#"><img src="./public/linkedin.png" alt=""></a></li>
+        <li><a href="#"><img src="./public/twitter.png" alt=""></a></li>
+    </ul>
+</div>    
+    <div id="navigation">
+    <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</div>  
+<script type="text/javascript">
+   function toggle() {
+        var sec = document.getElementById('sec');
+        var nav = document.getElementById('navigation');
+        sec.classList.toggle('active');
+        nav.classList.toggle('active');
+    }
+</script>
+<script src="./public/main.js"></script>
+</body>
+</html>
